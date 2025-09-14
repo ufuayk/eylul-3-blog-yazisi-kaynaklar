@@ -11,7 +11,7 @@ services:
       - PUID=1000
       - PGID=1000
     volumes:
-      - /home:/srv
+      - ./files:/srv
       - filebrowser_data:/database
       - filebrowser_config:/config
 
