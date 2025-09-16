@@ -1,20 +1,10 @@
-version: '3.3'
+version: "3.8"
 
 services:
-  filebrowser:
-    image: filebrowser/filebrowser:latest
-    container_name: filebrowser
-    restart: unless-stopped
+  ttyd:
+    image: tsl0922/ttyd:alpine
+    container_name: ttyd
     ports:
-      - "192.168.1.12:8080:80"
-    environment:
-      - PUID=1000
-      - PGID=1000
-    volumes:
-      - ./files:/srv
-      - filebrowser_data:/database
-      - filebrowser_config:/config
-
-volumes:
-  filebrowser_data:
-  filebrowser_config:
+      - "192.168.1.12:7681:7681"
+    command: /bin/sh
+    restart: unless-stopped
