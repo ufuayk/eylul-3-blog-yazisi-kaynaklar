@@ -1,9 +1,11 @@
 version: '3.3'
 
 services:
-  openspeedtest:
-    image: openspeedtest/latest
-    container_name: openspeedtest
+  openwebui:
+    image: ghcr.io/open-webui/open-webui:latest
+    container_name: openwebui
     ports:
-      - "192.168.1.12:3000:3000"
+      - "192.168.1.12:3001:8080"
+    volumes:
+      - ./openwebui-data:/app/backend/data
     restart: unless-stopped
