@@ -1,13 +1,16 @@
 version: "3.7"
 
 services:
-  freshrss:
-    image: freshrss/freshrss:latest
-    container_name: freshrss-local
+  homepage:
+    image: gethomepage/homepage
+    container_name: homepage-local
     restart: unless-stopped
     ports:
-      - "192.168.1.12:8085:80"
+      - "192.168.1.12:3000:3000"
     environment:
       - TZ=Europe/Istanbul
+      - PUID=1000
+      - PGID=1000
     volumes:
-      - ./freshrss-data:/var/www/FreshRSS/data
+      - ./homepage-config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock
