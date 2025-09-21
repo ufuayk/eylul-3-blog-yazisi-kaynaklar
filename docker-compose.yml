@@ -1,11 +1,9 @@
 version: '3.3'
 
 services:
-  metube:
-    image: ghcr.io/alexta69/metube
-    container_name: metube
+  cyberchef:
+    image: gchq/cyberchef
+    container_name: cyberchef
     restart: unless-stopped
     ports:
-      - "192.168.1.12:2081:2081"
-    volumes:
-      - /path/to/downloads:/downloads
+      - "192.168.1.12:1010:8000"
