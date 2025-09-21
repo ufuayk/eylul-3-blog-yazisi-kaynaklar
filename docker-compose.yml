@@ -1,9 +1,9 @@
 version: '3.3'
 
 services:
-  cyberchef:
-    image: gchq/cyberchef
-    container_name: cyberchef
+  stirling-pdf:
+    image: stirlingtools/stirling-pdf
+    container_name: stirling-pdf
     restart: unless-stopped
     ports:
-      - "192.168.1.12:1010:8000"
+      - "192.168.1.12:2025:8080"
