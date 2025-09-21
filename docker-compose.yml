@@ -1,9 +1,0 @@
-version: '3.3'
-
-services:
-  stirling-pdf:
-    image: stirlingtools/stirling-pdf
-    container_name: stirling-pdf
-    restart: unless-stopped
-    ports:
-      - "192.168.1.12:2025:8080"
