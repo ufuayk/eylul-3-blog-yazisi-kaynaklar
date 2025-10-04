@@ -1,0 +1,23 @@
+pageTitle: "Panel"
+showNewVersions: false
+showFooter: false
+
+actions:
+  - title: "date"
+    shell: date
+  - title: "disk"
+    shell: df -h
+  - title: "mem"
+    shell: free -h
+  - title: "docker ps"
+    shell: docker ps -a
+  - title: "images"
+    shell: docker images
+  - title: "random"
+    shell: openssl rand -base64 16
+  - title: "last"
+    shell: last -n 10
+  - title: "ping"
+    shell: ping -c google.com
+  - title: "shutdown"
+    shell: systemctl poweroff
